@@ -187,34 +187,70 @@ window.addEventListener('scroll', () => {
     handleHeader();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    initSmoothScroll();
-    initFormHandling();
-    
+// Mobile Menu
+function initMobileMenu() {
     const mobileToggle = document.querySelector('.mobile-nav-toggle');
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', toggleMobileNav);
-    }
+    const navList = document.querySelector('.nav-list');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    // Theme initialization
+    if (!mobileToggle || !navList) return;
+
+    mobileToggle.addEventListener('click', () => {
+        const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', !isExpanded);
+        navList.classList.toggle('active');
+        
+        // Toggle icon
+        const icon = mobileToggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    // Close menu when clicking on links
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navList.contains(e.target) && !mobileToggle.contains(e.target) && navList.classList.contains('active')) {
+            navList.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+        }
+    });
+}
+
+// Theme Toggle Function
+function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
+    // Get theme from localStorage or system preference
     let currentTheme = localStorage.getItem('theme');
     if (!currentTheme) {
         currentTheme = prefersDarkScheme.matches ? 'dark' : 'light';
         localStorage.setItem('theme', currentTheme);
     }
 
+    // Set initial theme
     document.documentElement.setAttribute('data-theme', currentTheme);
     updateThemeIcon(currentTheme);
 
+    // Theme toggle click handler
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
         
         document.documentElement.classList.add('theme-transition');
-        
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
@@ -224,17 +260,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
     });
 
+    // System theme change handler
     prefersDarkScheme.addEventListener('change', (e) => {
         const newTheme = e.matches ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
     });
-});
+}
 
 function updateThemeIcon(theme) {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = themeToggle.querySelector('i');
-    themeIcon.classList.remove('fa-sun', 'fa-moon');
-    themeIcon.classList.add(theme === 'light' ? 'fa-moon' : 'fa-sun');
+    
+    themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
 }
+
+// Initialize all functions
+document.addEventListener('DOMContentLoaded', () => {
+    initMobileMenu();
+    initFormHandling();
+    initSmoothScroll();
+    initThemeToggle();
+    
+    const mobileToggle = document.querySelector('.mobile-nav-toggle');
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', toggleMobileNav);
+    }
+});
