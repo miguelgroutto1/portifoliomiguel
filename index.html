@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Groutto Rocha | Desenvolvedor Full-Stack</title>
+    <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%232563eb' d='M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#home" class="logo">Miguel Groutto Rocha</a>
+            <nav class="nav">
+                <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                    <span class="sr-only">Menu</span>
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-list" id="primary-navigation">
+                    <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#conhecimentos" class="nav-link">Conhecimentos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content"> 
+                <div class="hero-text">
+                    <h1 class="title">Olá, eu sou Miguel Groutto <span class="typing"></span></h1>
+                    <p class="subtitle">Especializado em criar experiências digitais incríveis com tecnologias modernas.</p>
+                    <div class="hero-buttons">
+                        <a href="#projetos" class="btn btn-primary">
+                            <span>Ver Projetos</span>
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <a href="#contato" class="btn btn-outline">
+                            <span>Contate-me</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="sobre-content">
+                <div class="sobre-left">
+                    <div class="sobre-image">
+                        <img src="images/miguelgrouttoefeito.png" alt="Miguel Groutto Rocha">
+                        <div class="sobre-shape"></div>
+                    </div>
+                    <div class="sobre-social">
+                        <a href="https://github.com/miguelgroutto1" class="sobre-social-link" aria-label="GitHub" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/miguelgrouttorocha/" class="sobre-social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/miguelgroutto_/" class="sobre-social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="sobre-right">
+                    <div class="sobre-text">
+                        <p class="sobre-greeting">Olá! Eu sou</p>
+                        <h3 class="sobre-name">Miguel Groutto Rocha</h3>
+                        <p class="sobre-role">Desenvolvedor Full-Stack</p>
+                        
+                        <div class="sobre-description">
+                            <p>Desenvolvedor Full-Stack apaixonado por criar interfaces modernas e intuitivas. Especializado em HTML, CSS, JavaScript e React, com foco em performance e experiência do usuário.</p>
+                        </div>
+
+                        <div class="sobre-info">
+                            <div class="info-item">
+                                <span class="info-label">Idade</span>
+                                <span class="info-value">17 anos</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Localização</span>
+                                <span class="info-value">Bauru, SP</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">miguelgroutto1@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Telefone</span>
+                                <span class="info-value">(19) 98718-8950</span>
+                            </div>
+                        </div>
+
+                        <div class="sobre-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-code"></i>
+                                <span class="stat-number">10k+</span>
+                                <span class="stat-label">Linhas de<br>Código</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Projetos<br>Pessoais</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-fire"></i>
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Comprometimento<br>& Paixão</span>
+                            </div>
+                        </div>
+
+                        <div class="sobre-buttons">
+                            <a href="assets/curriculo-miguel-groutto.pdf" class="btn btn-primary" download>
+                                <i class="fas fa-download"></i>
+                                <span>Download CV</span>
+                            </a>
+                            <a href="#contato" class="btn btn-outline">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Fale Comigo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section class="projetos section-padding" id="projetos">
+        <div class="container">
+            <h2 class="section-title">Projetos</h2>
+            <div class="projetos-grid">
+                <!-- Projeto Card 1 -->
+                <article class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="images/projeto1.png" alt="MVM TECH - Screenshot do Site">
+                        <div class="projeto-overlay">
+                            <div class="projeto-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <h3>MVM TECH</h3>
+                        <p>Este portfólio apresenta o tema, objetivo, público-alvo e linguagens utilizadas no desenvolvimento do meu TCC em Desenvolvimento de Sistemas. O projeto está em construção e busca oferecer uma solução útil e eficiente, aplicando na prática os conhecimentos adquiridos ao longo do curso.</p>
+                        <div class="projeto-links">
+                            <a href="https://github.com/miguelgroutto1/Portif-lioTCC" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i>
+                                <span>Código</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto Card 2 -->
+                <article class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="images/projeto2.png" alt="Foto do Projeto">
+                        <div class="projeto-overlay">
+                            <div class="projeto-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <h3>Gerador de Senhas</h3>
+                        <p>Eu criei um gerador de senhas com HTML, CSS e JavaScript. O projeto é uma aplicação simples que permite ao usuário gerar senhas aleatórias com base em diferentes critérios, como comprimento, caracteres especiais e números.</p>
+                        <div class="projeto-links">
+                            <a href="https://github.com/miguelgroutto1/geradordesenha" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i>
+                                <span>Código</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto Card 3 -->
+                <article class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="images/projeto3.png" alt="Social Media">
+                        <div class="projeto-overlay">
+                            <div class="projeto-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <h3>NexMind Solutions</h3>
+                        <p>A NexMind Solutions é uma empresa fictícia especializada em soluções inteligentes com uso de inteligência artificial. Desenvolvemos tecnologias inovadoras para otimizar processos, impulsionar negócios e transformar ideias em realidade por meio da inovação digital.</p>
+                        <div class="projeto-links">
+                            <a href="https://github.com/miguelgroutto1/NexMind" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i>
+                                <span>Código</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conhecimentos Section -->
+    <section class="conhecimentos section-padding" id="conhecimentos">
+        <div class="container">
+            <h2 class="section-title">Conhecimentos</h2>
+            
+            <!-- FullStack -->
+            <h3 class="skills-subtitle">FullStack</h3>
+            <div class="skills-grid">
+                <!-- Primeira Fileira -->
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-node"></i>
+                    <h3>Node.js</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 60%"></div>
+                    </div>
+                </div>
+                <!-- Segunda Fileira -->
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>MySQL</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 50%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 25%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-php"></i>
+                    <h3>PHP</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 25%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 10%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section class="contato section-padding" id="contato">
+        <div class="container">
+            <h2 class="section-title">Fale Comigo</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Localização</h3>
+                            <p>São Paulo, SP - Brasil</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>E-mail</h3>
+                            <p>miguelgroutto1@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(19) 98718-8950</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/miguelgroutto1" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/miguelgrouttorocha/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/miguelgroutto_/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contato-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="nome" name="name" placeholder=" " required>
+                        <label for="nome">
+                            <i class="fas fa-user"></i>
+                            Nome
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">
+                            <i class="fas fa-envelope"></i>
+                            E-mail
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="assunto" name="subject" placeholder=" " required>
+                        <label for="assunto">
+                            <i class="fas fa-heading"></i>
+                            Assunto
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensagem" name="message" placeholder=" " required></textarea>
+                        <label for="mensagem">
+                            <i class="fas fa-comment"></i>
+                            Mensagem
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Enviar Mensagem</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-logo">Miguel Groutto Rocha</h3>
+                    <p>Desenvolvedor Web Full-Stack</p>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#conhecimentos">Conhecimentos</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+                <div class="footer-social">
+                    <a href="https://github.com/miguelgroutto1" aria-label="GitHub" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/miguelgrouttorocha/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/miguelgroutto_/" aria-label="Instagram" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Miguel Groutto Rocha. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
