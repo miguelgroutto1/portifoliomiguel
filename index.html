@@ -6,6 +6,7 @@
     <title>Miguel Groutto Rocha | Desenvolvedor Full-Stack</title>
     <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%232563eb' d='M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z'/%3E%3C/svg%3E" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -335,9 +336,9 @@
                         </a>
                     </div>
                 </div>
-                <form class="contato-form" id="contactForm">
+                <form class="contato-form" id="contactForm" method="post">
                     <div class="form-group">
-                        <input type="text" id="nome" name="name" placeholder=" " required>
+                        <input type="text" id="name" name="name" placeholder=" " required>
                         <label for="nome">
                             <i class="fas fa-user"></i>
                             Nome
@@ -351,7 +352,7 @@
                         </label>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="assunto" name="subject" placeholder=" " required>
+                        <input type="text" id="subject" name="subject" placeholder=" " required>
                         <label for="assunto">
                             <i class="fas fa-heading"></i>
                             Assunto
@@ -410,4 +411,5 @@
     <script src="script.js"></script>
 </body>
 </html> 
+
 
