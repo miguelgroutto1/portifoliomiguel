@@ -288,3 +288,25 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.addEventListener('click', toggleMobileNav);
     }
 });
+
+emailjs.init({
+        publicKey: "NvTIuiL9BdWP8DZHS",
+      });
+
+document.getElementById("contact_form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    cons formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+    }
+});
+
+const serviceID = "service_h360v5e";
+const templateID = "template_3yjo16l";
+const submitButton = document.getElementById("submit_button")
+
+emailjs.send(serviceID,templateID,formData);
+submitButton.textContent = "Enviando...";
